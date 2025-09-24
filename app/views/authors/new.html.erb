@@ -1,0 +1,19 @@
+<h1> New Author </h1>
+
+<%= form_with model: @author, local: true do |form| %>
+
+    <div class="mb-3 col-4">
+        <%= form.label :first_name, "Nombre", class: "form_label" %>
+        <%= form.text_field :first_name, placeholder: "Escribe el Nombre" %>
+    </div>
+
+    <div class="mb-3 col-4">
+        <%= form.label :last_name, "Apellido", class: "form_label" %>
+        <%= form.text_field :last_name, placeholder: "Escribe el Apellido" %>
+    </div>
+
+    <div>
+        <%= link_to "Cancelar", authors_path, class: "btn btn-danger" %>
+        <%= form.submit "Guardar", class: "btn btn-primary" %>
+    </div>
+<% end %>
